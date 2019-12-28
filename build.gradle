@@ -25,6 +25,20 @@ repositories {
 
 
 dependencies {
+
+	//Spring Boot Part
 	implementation('org.springframework.boot:spring-boot-starter-web')
+	implementation('org.springframework.boot:spring-boot-starter-data-neo4j')
+	implementation('org.springframework.boot:spring-boot-starter-data-rest')
+	implementation('org.springframework.boot:spring-boot-devtools')
+
+	//Neo4j part
+	implementation 'org.neo4j:neo4j:3.4.9'
+	implementation 'org.neo4j:neo4j-ogm-embedded-driver:3.2.4'
+	implementation 'org.neo4j:neo4j-ogm-bolt-driver:3.2.4'
+	implementation 'org.neo4j:neo4j:3.4.9'
+
+	implementation 'org.neo4j.driver:neo4j-java-driver:1.7.2'
 	testImplementation('org.springframework.boot:spring-boot-starter-test')
+
 }

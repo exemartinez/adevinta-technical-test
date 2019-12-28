@@ -1,5 +1,6 @@
 package com.schibsted.spain.friends.legacy;
 
+import com.schibsted.spain.friends.controllers.PersonManager;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
@@ -10,6 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/friendship")
 public class FriendshipLegacyController {
+
+  private final PersonManager personService;
+
+  public FriendshipLegacyController(PersonManager personManager) {
+      this.personService = personManager;
+  }
 
   @PostMapping("/request")
   void requestFriendship(
